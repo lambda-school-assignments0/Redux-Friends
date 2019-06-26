@@ -1,10 +1,11 @@
 import React from 'react';
-import './styles/App.css';
+
+// import views
+import { FriendListView } from './views';
 
 function App() {
   return (
-    <div className="App">
-    </div>
+    <FriendListView />
   );
 }
 
