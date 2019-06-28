@@ -30,6 +30,7 @@ export const friendsReducer = (state = initialState, action) => {
                 error: ""
             }
         case FETCH_FRIENDS_SUCCESS:
+            console.log(action)
             return {
                 ...state,
                 friends: action.payload,

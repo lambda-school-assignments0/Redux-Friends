@@ -18,7 +18,7 @@ export const getFriendsList = () => dispatch => {
         .get('http://localhost:5000/api/friends', {
             headers: { Authorization: localStorage.getItem('token') }
         })
-        .then(res => dispatch({ type: FETCH_FRIENDS_SUCCESS, payload: res }))
+        .then(res => dispatch({ type: FETCH_FRIENDS_SUCCESS, payload: res.data }))
         .catch(err => {
             if (err.response.status === 403) {
                 localStorage.removeItem('token');
