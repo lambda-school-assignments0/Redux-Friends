@@ -4,6 +4,7 @@ import App from './App';
 
 // import styles
 import './styles/index.css';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 // import redux dependencies
 import { createStore, applyMiddleware } from 'redux';
