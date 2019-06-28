@@ -9,14 +9,15 @@ import Login from './components/Login';
 // import views
 import { FriendListView } from './views';
 
+// import custom styling
+import './styles/App.css';
+
 function App() {
   return (
     <Router>
       <div className='App'>
         <Navbar color='light'>
-          <NavbarBrand>
-            <Link to='/protected'>Friends</Link>
-          </NavbarBrand>
+          <NavbarBrand href='/protected'>Friends</NavbarBrand>
           <Nav>
             <NavItem>
               <Link to='/login'>Login</Link>

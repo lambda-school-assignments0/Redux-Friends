@@ -3,6 +3,8 @@ import { connect } from 'react-redux';
 
 import { login } from '../actions';
 
+import { Button, Form, FormGroup, Input, Label } from 'reactstrap';
+
 class Login extends Component {
     state = {
         credentials: {
@@ -29,23 +31,27 @@ class Login extends Component {
 
     render() {
         return (
-            <div>
-                <form onSubmit={this.handleLogin}>
-                    <input
+            <Form className='friend-form' onSubmit={this.handleLogin}>
+                <FormGroup>
+                    <Label>Username</Label>
+                    <Input
                         type='text'
                         name='username'
                         value={this.state.credentials.username}
                         onChange={this.handleChange}
                     />
-                    <input
+                </FormGroup>
+                <FormGroup>
+                    <Label>Password</Label>
+                    <Input
                         type='password'
                         name='password'
                         value={this.state.credentials.password}
                         onChange={this.handleChange}
                     />
-                    <button>Log In</button>
-                </form>
-            </div>
+                </FormGroup>
+                <Button color='primary'>Log In</Button>
+            </Form>
         )
     }
 }

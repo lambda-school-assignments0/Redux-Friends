@@ -15,7 +15,7 @@ class FriendListView extends Component {
     }
     render() {
         return (
-            <div className='FriendList_wrapper'>
+            <div className='friend-list-wrapper'>
                 <FriendList friends={this.props.friends}/>
             </div>
         )
